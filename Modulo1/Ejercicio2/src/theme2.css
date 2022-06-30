@@ -1,0 +1,11 @@
+html {
+  --baseColor: #8e3200;
+  --secondaryColor: #d7a86e;
+  --thirdColor: #a64b2a;
+  --fourthColor: #ffebc1;
+  --borderRadius: 5px 15px;
+  --importantFontSize: 25px;
+  --boxShadow: -5px 5px 3px 5px var(--baseColor);
+  --main-font: Arial, Helvetica, sans-serif;
+  --secondary-font: "Courier New", Courier, monospace;
+}

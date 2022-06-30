@@ -1,0 +1,42 @@
+@import url("./theme2.css");
+
+.box {
+  border: 1px solid black;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  border-radius: var(--borderRadius);
+}
+
+.base {
+  background-color: var(--baseColor);
+  color: var(--fourthColor);
+}
+
+.important {
+  background-color: var(--secondaryColor);
+  color: var(--baseColor);
+  font-size: var(--importantFontSize);
+}
+
+.warning {
+  background-color: var(--thirdColor);
+  color: var(--fourthColor);
+  font-size: var(--importantFontSize);
+}
+
+.principalFont {
+  font-family: var(--main-font);
+  color: var(--baseColor);
+}
+
+.secondaryFont {
+  font-family: var(--secondary-font);
+  color: var(--baseColor);
+}
+
+.shadow {
+  color: var(--baseColor);
+  border-color: var(--baseColor);
+  box-shadow: var(--boxShadow);
+}

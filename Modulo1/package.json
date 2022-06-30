@@ -1,0 +1,22 @@
+{
+  "name": "master-modulo1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ana-projects/Master-Modulo1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ana-projects/Master-Modulo1/issues"
+  },
+  "homepage": "https://github.com/Ana-projects/Master-Modulo1#readme",
+  "devDependencies": {
+    "sass": "^1.53.0"
+  }
+}

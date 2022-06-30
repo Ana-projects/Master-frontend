@@ -1,0 +1,12 @@
+html {
+  --baseColor: #2155cd;
+  --secondaryColor: #e8f9fd;
+  --thirdColor: #0aa1dd;
+  --fourthColor: white;
+  --borderRadius: 5px;
+  --importantFontSize: 20px;
+  --boxShadow: 5px 5px 3px 5px var(--baseColor);
+  --main-font: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  --secondary-font: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

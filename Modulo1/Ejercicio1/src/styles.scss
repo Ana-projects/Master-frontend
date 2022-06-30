@@ -1,0 +1,72 @@
+@mixin getColorPallete($baseColor) {
+  @for $i from 1 through 4 {
+    .darken-#{$i} {
+      background-color: darken($baseColor, 10% * $i);
+    }
+    .lighten-#{$i} {
+      background-color: lighten($baseColor, 10% * $i);
+    }
+  }
+}
+
+@mixin containerSettings($baseColor) {
+  display: flex;
+  justify-content: center;
+
+  .base-color {
+    background-color: $baseColor;
+  }
+
+  @include getColorPallete($baseColor);
+
+  @media screen and (max-width: 860px) {
+    & {
+      flex-direction: column;
+    }
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 860px) {
+    & {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+}
+
+.box {
+  width: 70px;
+  height: 70px;
+}
+.container-1 {
+  $baseColor: red;
+
+  @include containerSettings($baseColor);
+}
+
+.container-2 {
+  $baseColor: green;
+
+  @include containerSettings($baseColor);
+}
+
+.container-3 {
+  $baseColor: blue;
+
+  @include containerSettings($baseColor);
+}
+
+.box {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 2px;
+}
+
+.color-box-text {
+  color: White;
+  font-style: bold;
+}
