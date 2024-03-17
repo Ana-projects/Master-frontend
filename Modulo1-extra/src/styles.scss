@@ -1,0 +1,141 @@
+$max-width: 768px;
+
+body {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}  
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  @media screen and (max-width: $max-width) {
+      display: none;
+  }
+}
+
+.page-title {
+  background-color: rgb(212, 212, 27);
+  color: white;
+  font-size: 150%;
+  padding: 10px;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+
+  @media screen and (max-width: $max-width) {
+    flex-direction: column;
+  }
+}
+
+
+nav {
+  width: 200px;
+  height: 100%;
+  background-color: olive;
+  
+  @media screen and (max-width: $max-width) {
+    width: 100%;
+    position: sticky;
+    top: 0px;
+  }
+
+  .menu-container {
+    position: sticky;
+    top: 0px;
+  
+    @media screen and (max-width: $max-width) {
+      width: 100%;
+    }
+
+    .menu-title {
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+
+      @media screen and (max-width: $max-width) {
+          display: none;
+      }
+    }
+  
+    ul {
+      margin: 0px;
+      padding: 0px;
+      list-style-type: none;
+    
+      @media screen and (max-width: $max-width) {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      li {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid grey;
+        background-color: lightyellow;
+        @media screen and (max-width: $max-width) {
+          margin: 5px;
+          width: 60px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+main {
+  background-color: lightgray;
+  width: 100%;
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .card {
+      border: 1px solid black;
+      background-color: white;
+      margin: 10px;
+      padding: 10px;
+      width: 200px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    
+      img {
+        border-radius: 50%;
+      }
+      
+      .member-name {
+        text-align: center;
+      }
+    
+      @media screen and (max-width: $max-width) {
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 10px;   
+      }
+    }
+  }
+}
+
+
+footer {
+  background-color: lightyellow;
+  padding: 10px;
+}
