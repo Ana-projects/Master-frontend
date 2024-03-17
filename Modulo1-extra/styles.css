@@ -1,0 +1,99 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.page-title {
+  background-color: rgb(212, 212, 27);
+  color: white;
+  font-size: 150%;
+  padding: 10px;
+}
+
+.menu-title {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}
+
+ul {
+  background-color: lightyellow;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+li {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid grey;
+}
+
+main {
+  background-color: lightgray;
+  width: 100%;
+}
+
+nav {
+  width: 200px;
+  height: 100%;
+  background-color: olive;
+}
+
+.menu-container {
+  position: sticky;
+  top: 0px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  border: 1px solid black;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  border-radius: 50%;
+}
+
+.member-name {
+  text-align: center;
+}
+
+footer {
+  background-color: lightyellow;
+  padding: 10px;
+}
