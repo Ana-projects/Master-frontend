@@ -1,0 +1,24 @@
+$main-color: #ccda46;
+$secondary-color: orange;
+
+img {
+  width: 25vw;
+}
+
+body {
+  background-color: $main-color;
+
+  header {
+    display: flex;
+    background-color: $secondary-color;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+
+    .headerText {
+      color: white;
+      font-size: 200px;
+      font-weight: bold;
+    }
+  }
+}
