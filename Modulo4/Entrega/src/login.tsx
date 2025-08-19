@@ -1,40 +1,39 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { generatePath, useNavigate } from "react-router-dom";
+import { UserContext } from "./user.context";
+
+interface User {
+  username: string;
+  password: string;
+}
 
 export const LoginPage: React.FC = () => {
-  const navigate = useNavigate();
-  const [username, setUsername] = React.useState("");
-  const [password, setPassword] = React.useState("");
+  const [user, setUser] = React.useState<User>({ username: "", password: "" });
+  const { handleLogin } = React.useContext(UserContext);
 
-  const handleNavigation = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (username === "admin" && password === "test") {
-      navigate("/list");
-    } else {
-      alert("User / password not valid, psst... admin / test");
-    }
-  };
+  const handleChangeUser =
+    (field: keyof User) => (e: React.ChangeEvent<HTMLInputElement>) =>
+      setUser({ ...user, [field]: e.target.value });
 
   return (
     <>
-      <form onSubmit={handleNavigation}>
+      <form onSubmit={() => handleLogin(user.username, user.password)}>
         <h2>Hello from login page</h2>
 
         <div>
           <div>
             <label>Username: </label>
             <input
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              value={user.username}
+              onChange={handleChangeUser("username")}
             />
           </div>
           <div>
             <label>Password: </label>
             <input
               type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              value={user.password}
+              onChange={handleChangeUser("password")}
             />
           </div>
         </div>

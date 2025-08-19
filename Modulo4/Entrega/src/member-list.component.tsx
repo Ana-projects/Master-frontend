@@ -6,8 +6,7 @@ interface Props {
   organization: string;
 }
 
-export const MemberList: React.FC<Props> = (props) => {
-  const { organization } = props;
+export const MemberList: React.FC<Props> = ({ organization }) => {
   const [members, setMembers] = React.useState<MemberEntity[]>([]);
   const [error, setError] = React.useState<string>("");
 
@@ -23,9 +22,7 @@ export const MemberList: React.FC<Props> = (props) => {
         }
         return response.json();
       })
-      .then((json) => {
-        setMembers(json);
-      })
+      .then(setMembers)
       .catch((err) => {
         setMembers([]);
         setError(`No members found: ${err.message}`);

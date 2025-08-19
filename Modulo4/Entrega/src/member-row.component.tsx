@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { generatePath, Link } from "react-router-dom";
 import { MemberEntity } from "./model";
 
 interface Props {
@@ -12,7 +12,9 @@ export const MemberRow = (props: Props) => {
     <>
       <img src={member.avatar_url} />
       <span>{member.id}</span>
-      <Link to={`/detail/${member.login}`}>{member.login}</Link>
+      <Link to={generatePath("/detail/:id", { id: member.login })}>
+        {member.login}
+      </Link>
     </>
   );
 };
